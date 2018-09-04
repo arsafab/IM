@@ -1,0 +1,26 @@
+{
+  "name": "arsafab",
+  "version": "1.0.2",
+  "description": "html+js+css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arsafab/gulp/tree/gulp_3"
+  },
+  "dependencies": {
+    "browser-sync": "^2.2.3",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.1.1",
+    "imagemin-pngquant": "^4.0.0",
+    "jquery": "^3.2.1",
+    "rimraf": "^2.3.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-sass": "^2.3.2",
+    "node-sass": "^4.5.3"
+  }
+}

@@ -1,0 +1,483 @@
+// css for head page - index.html
+
+.jumbo{
+	.row{
+		position: relative;
+		.process{
+			position: relative;
+			float: right;
+		}
+		@media screen and (min-width: 600px) and (max-width: 767px){
+			div:first-child{
+				width: 60%;
+			}
+		}
+		@media screen and (min-width: 1200px){
+			div:first-child{
+				width: 500px;
+			}
+		}
+	}
+	background: url(../img/bg/jumbo.jpg) center center;
+	background-size: cover;
+	min-height: 210px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 40px;
+	@media screen and (min-width: 530px) {
+		padding-right: 15%;
+	}
+	@media screen and (min-width: 767px) {
+		padding-right: 15px;
+		padding-bottom: 40px;
+	}
+	@media screen and (min-width: 992px) and (max-width: 1198px){
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+
+	h1,
+	p,
+	small{
+		font-family: RobotoLight;
+	}
+	small{
+		display: block;
+		margin-top: -10px;
+	}
+	@media screen and (min-width: 767px) {
+		p,
+		h1,
+		small{
+			margin-bottom: 25px;
+		}
+		small{
+			margin-top: 0;
+		}
+	}	
+	a{
+		@include buttonLight(#74C1D0);
+	}
+	ul{
+		margin-top: -10px;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+		@media screen and (min-width: 1200px) {
+			margin-top: 0;
+			width: 360px;
+			float: right;
+		}
+		li{
+			color:#fff;
+			text-align: right;
+			padding-top: 20px;
+			padding-right: 55px;
+			position: relative;
+			font-size: 0.8rem;
+
+			&:first-child,
+			&:nth-child(2),
+			&:last-child{
+				height: 50px;
+				padding-top: 25px;
+			}
+			&::after{
+				content: url(../img/elems/circle.svg);
+				position: absolute;
+				right: 0;
+				top: 40%;
+			}
+		}
+	}	
+	.break{
+		position: absolute;
+		top: -30px;
+		right: 30px;
+		z-index: 11;
+		width: 0.5px;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+		@media screen and (min-width: 1200px) {
+			top: -20px;
+		}
+		&::before {
+			background: #ffffff;
+			background: linear-gradient(to top, #ffffff 0%, #999999 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#999999', GradientType=1);
+			content: "";
+			display: block;
+			height: 155px;
+			width: 100%;  
+			@media screen and (min-width: 1400px) {
+				height: 175px;
+			} 
+			@media screen and (max-width: 1000px) {
+				content: none;
+			} 
+		}
+		&::after{
+			background: #ffffff;
+			background: linear-gradient(to bottom, #ffffff 0%, #999999 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#999999', GradientType=1);
+			content: "";
+			display: block;
+			height: 155px;
+			width: 100%;
+			@media screen and (min-width: 1400px) {
+				height: 175px;
+			}
+			@media screen and (max-width: 1000px) {
+				content: none;
+			} 
+		}	
+	}
+}	
+
+#down{
+	padding-top: 30px;
+	text-align: center;
+	svg{
+		cursor: pointer;
+		&:hover .down0,
+		&:focus .down0{
+			stroke:rgba(255, 255, 255, 1);
+			-webkit-transition: all .4;
+			-o-transition: all .4;
+			-moz-transition: all .4;
+			transition: all .4;
+		}
+	}
+	.down0 {
+		stroke:rgba(255, 255, 255, .5);
+		stroke-width:9.99792;
+	}
+	.down1 {
+		fill:none;
+	}	
+}
+
+.advantages{
+	.row{
+		text-align: center;
+	}
+	a{
+		margin-bottom: 20px;
+		display: block;
+		font-size: 0.69rem;
+		@media screen and (min-width: 350px){
+			font-size: 0.78rem;
+		}
+		@media screen and (min-width: 400px){
+			font-size: 0.9rem;
+		}
+		@media screen and (min-width: 450px){
+			font-size: 1rem;
+		}
+		svg{
+			width: 85px;
+			height: 85px;
+		}
+		@media screen and (min-width: 480px){
+			svg{
+				width:150px;
+				height: 150px;
+			}	
+		}
+		@media screen and (min-width: 768px){
+			svg{
+				width: 83px;
+				height: 83px;
+			}	
+		}
+		@media screen and (min-width: 980px){
+			svg{
+				width: 95px;
+				height: 95px;
+			}	
+		}
+		@media screen and (min-width: 1200px){
+			svg{
+				width: 104px;
+				height: 104px;
+			}	
+		}
+		@media screen and (min-width: 1400px){
+			svg{
+				width: 120px;
+				height: 120px;
+			}	
+		}
+		&:hover .fil0,
+		&:focus .fil0{
+			fill:none;
+			transition: all .2s;
+		}
+		&:hover .fil2,
+		&:focus .fil2{
+			fill:#fff;
+			transition: all .2s;
+		}
+		&:hover .fil1,
+		&:focus .fil1{
+			fill:$mainColor;
+			transition: all .2s;
+		}
+	}	
+}
+
+.illness{
+	margin-bottom: 120px;
+	@media screen and (max-width: 992px){
+		margin-bottom: 90px;
+	}
+	@media screen and (max-width: 768px){
+		margin-bottom: 70px;
+	}
+	@include margin(80px);
+	h2{
+		@include border(#000);
+		width: 200px;
+		margin-bottom: 20px;
+	}
+	& > a{
+		@include button($mainColor);
+		clear: both;
+		@media screen and (min-width: 768px){
+			position: relative;
+			top:20px;
+		}
+	}
+}
+
+.prices{
+	@media screen and (min-width: 768px){
+		margin-top: 60px;
+	}
+	padding: 20px 10px 30px 30px;
+	border-left: 10px solid $mainColor;
+	background: #dce8f6;
+	position: relative;
+	@media screen and (min-width: 1200px){
+		padding-left: 100px;
+	}
+	&::after {
+	    content: ''; 
+	    position: absolute; 
+	    right: 0; 
+	    top: 0; 
+	   	width: 0;
+		height: 0;
+		border-top: 90px solid #fff; 
+		border-left: 40px solid transparent;
+	}
+	&::before {
+	    content: ''; 
+	    position: absolute; 
+	    bottom: 0; 
+	    right: 0; 
+	    width: 0;
+		height: 0;
+		border-bottom: 90px solid #fff; 
+		border-left: 40px solid transparent;
+	}	
+	h2{
+		padding-bottom: 0;		
+		padding-right: 40px;
+		position: relative;
+		@media screen and (min-width: 768px){
+			&::after{
+				content: '';
+				height: 1px;
+				background: lighten(#000, 85%); 
+				width: 170px;
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+			}	
+		}
+		@media screen and (min-width: 992px){
+			padding-bottom: 20px;	
+			&::after{
+				bottom: 5px;
+			}
+		}
+	}
+	p{
+		padding-right: 30%;
+		@media screen and (min-width: 1200px){
+			padding-right: 30%;
+		}
+	}
+	& > a{
+		@include button($mainColor);
+		@media screen and (min-width: 768px){
+			position: absolute;	
+			top: 30%;
+			right: 10%;
+		}
+		@media screen and (min-width: 1200px){
+			right: 10%;
+		}
+	}	
+}
+
+.clinics,
+.needToKnow{
+	@include margin(80px);
+	h2{
+		@include border(#000);
+		width: 200px;
+		margin-bottom: 20px;
+	}
+	h3{
+		color: #333;
+		margin-bottom: -2px;
+	}
+	hr{
+		width: 70px;
+		float: left;
+	}
+	p{
+		color: #333;
+		font-family: RobotoLight, sans-serif;
+		clear: both;
+		span{
+			@include button($mainColor);
+		}
+	}
+	.left,
+	.right{
+		svg{
+			height: 86px;
+			width: 26px;
+		}
+		.control0 {
+			stroke:#B3B3B3;
+			stroke-width:9.99798;
+		}
+		.control1 {
+			fill:none;
+		}
+	}
+	.item{
+		a{	
+			& > span{
+				position: relative;
+				z-index: 3;
+				display: block;
+				width: 100%;
+				&::after{
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					z-index: 2;
+					width: 100%;
+					height: 100%;
+					background: rgba(0, 0, 0, 0);
+					@media screen and (max-width: 600px){
+						content: none; 
+					}
+				}
+			}
+			display: block;	
+			&:hover h3,
+			&:focus h3{
+				color: $mainColor;
+				transition: all .2s;
+			}
+			&:hover span::after,
+			&:focus span::after{
+				background: rgba(0, 0, 0, .5);
+				transition: all .2s;
+			}
+			img{
+				@media screen and (max-width: 600px){
+					width: 100%;
+					margin-top: 30px;
+				}
+				@media screen and (min-width: 600px){
+					width: 100%;
+					max-height: 150px;
+				}
+				@media screen and (min-width: 1200px){
+					width: 100%;
+					max-height: 200px;
+				}
+			}
+		}
+		& > a:last-child{
+			@media screen and (min-width: 600px) and (max-width: 768px) {
+				display: none;
+			}
+		}
+	} 
+	& > a{
+		@include button($mainColor);
+		clear: both;
+		margin-top: 0;
+		@media screen and (min-width: 600px){
+			margin-top: 145px;
+		}
+	}
+	@media screen and (max-width: 600px){
+		.carousel-indicators,
+		.carousel-control{
+			display: none;
+		}
+	}
+}
+
+.feedback{
+	margin-bottom: 140px;
+	margin-top: 280px;
+	
+	@media screen and (max-width: 767px){
+		margin-top: 260px;
+		margin-bottom: 20px;
+	}
+	@media screen and (max-width: 600px){
+		margin-top: 50px;
+	}
+	background: url('../img/bg/bgFeedback.jpg');
+	background-size: cover;
+	
+	.container{
+		padding: 50px 20px;
+		@media screen and (min-width: 992px){
+			padding: 50px 100px 50px 150px;
+		}
+	}
+	button{
+		@include buttonLight(#74C1D0);
+		justify-content: space-around;
+		margin-top: 30px;
+		@media screen and (max-width: 768px){
+			margin-left: 10%; 
+		}
+	}	
+	h2{
+		color: #fff;
+		padding-bottom: 0px;
+		@media screen and (max-width: 768px){
+		    width: 80%;
+		    margin: 0 auto;
+		}
+	}
+	p{
+		@extend h2;
+		padding-bottom: 25px;
+		margin-top: 0;
+		font-size: 0.9rem;
+		@media screen and (max-width: 768px){
+		    margin-top: 10px;
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 1100px){
+		input{
+			font-size: 0.7rem;
+		}
+	}
+}

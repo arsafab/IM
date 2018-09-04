@@ -1,0 +1,368 @@
+#contactInfo {	
+	padding-top: 10px;
+	margin-bottom: -5px;
+	background: #fff;
+	@media screen and (min-width: 768px) {
+		padding-top: 15px;
+	}	
+	@media screen and (max-width: 768px) {
+		margin-bottom: -10px;
+	}
+	@media screen and (min-width: 1200px) {			
+		& > .container{
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+	.logo {
+		
+		float:left;
+		a{
+			display: block;
+		}
+		svg {
+			width:130px;
+			@media screen and (min-width: 340px) {
+				width:150px;				
+			}
+			@media screen and (min-width: 380px) {
+				width:170px;				
+			}
+			@media screen and (min-width: 550px) {
+				width:160px;				
+			}
+			@media screen and (min-width: 580px) {
+				width:170px;				
+			}
+			@media screen and (min-width: 613px) {
+				width:180px;				
+			}	
+			@media screen and (min-width: 645px) {
+				width:190px;
+				margin-top: -5px;
+			}	
+			@media screen and (min-width: 725px) {
+				width:215px;
+				margin-top: -7px;
+			}		
+			@media screen and (min-width: 768px) {
+				width:210px;
+				margin-top: 2px;
+			}
+			@media screen and (min-width: 992px) {
+				width:250px;				
+			}
+			@media screen and (min-width: 1400px) {
+				width:299px;			
+			}		
+		}		
+	}
+	ul {
+		padding-top: 2px;
+		padding-left: 0;
+		float: right;
+		position: relative;
+		@media screen and (min-width: 550px) {
+			width: 69%;
+			padding-top: 3px;
+		}
+		@media screen and (min-width: 992px) {
+			display: flex;
+			justify-content:space-between;
+			align-items:center;
+			margin-top: 5px;
+			//width: 75%;
+		}	
+		li{
+			padding-bottom: 4px;
+			@media screen and (min-width: 992px) {
+				&:first-child{
+					position: relative;
+					left: 5%;
+				}
+			}
+			@media screen and (min-width: 1200px) {
+				&:first-child{
+					left: 0;
+				}
+			}
+			svg{
+				width: 13px;
+				height: 13px;
+				margin-right: 4px;
+				@media screen and (min-width: 520px) {
+					width: 15px;
+					height: 15px;
+				}
+				@media screen and (min-width: 768px) {
+					width: 24px;
+					height: 24px;
+				}
+			}
+			svg + span{
+				font-family: RobotoLight;
+			}
+			.btn-info{
+				display: none;
+				font-family: RobotoMedium;
+				@media screen and (min-width: 550px) {
+					display: block;
+					position: absolute;
+					right: 0.5%;
+					top: 2px;
+				}
+				@media screen and (min-width: 768px) {
+					height: 40px;
+					width: 150px;
+					right:15%;
+					top:7px;					
+				}
+				@media screen and (min-width: 992px) {
+					position: static;
+					height: 39px;
+					width: 150px;
+				}
+				@media screen and (min-width: 1200px) {
+					width: 160px;
+				}
+				@media screen and (min-width: 1400px) {
+					height: 51px;
+					width: 177px;
+				}
+				&:hover,
+				&:focus{
+					background: #fff;
+					border:1px solid $mainColor;
+					transition:all .4s;
+					color: $mainColor;
+				}
+			}
+			
+			a{
+				display: flex;
+				align-items:center;
+				font-size: 0.8rem;
+				@media screen and (max-width: 360px) {
+					font-size: 0.7rem;
+				}
+				@media screen and (min-width: 772px) {
+					font-size: 1rem;
+				}
+			}
+			a:hover .phone0,
+			a:hover .mail0,
+			a:focus .phone0,
+			a:focus .mail0{
+				fill:#fff;
+				transition: all .2s;
+			}
+			a:hover .phone1,
+			a:hover .mail1,
+			a:focus .phone1,
+			a:focus .mail1{
+				fill:$mainColor;
+				transition: all .2s;
+			}
+
+			@media screen and (min-width: 450px) {
+		    	padding-left: 10px;
+			}
+		}
+		.phone0, .mail0{
+			fill:#0d92e1;
+		}
+		.phone1, .mail1{
+			fill:#fff;
+		}
+		.searchHeader{
+			position: absolute;
+			right: 0;
+			top:62px;
+			z-index:100;
+			@media screen and (min-width: 361px) {
+		    	top:67px;
+			}
+			@media screen and (min-width: 768px) {
+		    	top:7px;
+			}
+			@media screen and (min-width: 992px) {
+				position: static;
+				margin-top: 3px;
+			}
+			input,
+			button{
+				display: none;
+			}
+			input{
+				border: none;
+				height: 35px;
+				width: 150px;
+				padding-left: 10px;
+				position: absolute;
+				top: 0;
+				right: 40px;
+				@media screen and (min-width: 768px) {
+					height: 40px;
+					width: 215px;
+					right: 45px;
+					border:1px solid #000;
+				}	
+				@media screen and (min-width: 992px) {
+					margin-top: 6px;
+				}
+				@media screen and (min-width: 1200px) {
+					height: 40.8px;
+					width: 260px;
+				}
+				@media screen and (min-width: 1400px) {
+					height: 51px;
+					width: 270px;
+					top: 1.5px;
+					right: 55px;
+				}
+			}
+			button{
+				background: none;
+				border: none;
+				padding: 0;
+				margin: 0;			
+			}
+			svg{
+				height: 35px;
+				width: 35px;
+				cursor: pointer;
+				.sear1{
+					stroke:#fff;
+					stroke-width:20;
+				}
+				.sear0{
+					stroke:#fff;
+					stroke-width:14;
+				}
+				.sear2{
+					fill:none;
+				}
+				@media screen and (min-width: 768px) {
+					height: 40px;
+					width: 40px;
+					.sear1{
+						stroke:#333;
+						stroke-width:20;
+					}
+					.sear0{
+						stroke:#333;
+						stroke-width:14;
+					}
+					.sear2{
+						fill:none;
+					}
+				} 
+				@media screen and (min-width: 1400px) {
+					height: 49.5px;
+					width: 49.5px;
+					margin-top: 2px;
+				}
+			}
+			i:hover svg .sear1,
+			i:focus svg .sear1,
+			button:hover svg .sear1,
+			button:focus svg .sear1{
+				stroke:$mainColor;
+				transition: all .2s;
+			}
+			i:hover svg .sear2,
+			i:focus svg .sear2,
+			button:hover svg .sear2,
+			button:focus svg .sear2{
+				fill:#fff;
+				transition: all .2s;
+			}
+			@media screen and (min-width: 768px) {
+				i:hover svg .sear1,
+				i:focus svg .sear1,
+				button:hover svg .sear1,
+				button:focus svg .sear1{
+					stroke:#fff;
+					transition: all .2s;
+				}
+				i:hover svg .sear2,
+				i:focus svg .sear2,
+				button:hover svg .sear2,
+				button:focus svg .sear2{
+					fill:$mainColor;
+					transition: all .2s;
+				}
+				i:focus svg .sear0,
+				i:hover svg .sear0,
+				button:focus svg .sear0,
+				button:hover svg .sear0{
+					stroke:$mainColor;
+				}
+			}
+		}
+	}
+}
+
+.bgMenu{
+	background: $mainColor;
+	height: 53px;
+	.navbar-header{
+		@media screen and (max-width: 768px) {
+			padding-bottom: 10px;
+		}	
+	}
+	@media screen and (min-width: 1200px) {
+		height: 71px;
+	}
+	@media screen and (min-width: 768px) {
+		margin-top: 5px;
+	}
+	@media screen and (min-width: 769px) and (max-width: 1199px) {
+		height: 53px;
+	}
+	@media screen and (min-width: 1200px) {			
+		.container{
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+	.menu{
+		padding: 0;
+		li{
+			width: 100%;
+		}
+		a{
+			@media screen and (min-width: 768px) and (max-width: 992px) {
+				font-size: 0.7rem;
+			}
+			@media screen and (min-width: 768px) {
+				text-align: center;
+			}
+			@media screen and (min-width: 1200px) {
+				font-family: RobotoLight;
+			}
+			&:hover,
+			&:focus{
+				border-left-color:$mainColor;
+				border-right-color:$mainColor;
+			}
+		}
+		.icon-bar{	
+			position: relative;
+		}
+		.navbar-toggle.active {
+			.first {
+			    top: 8px;
+			    transform: rotate(-45deg) translate(2.5px, -2.5px); 
+			}
+			.second {
+			    visibility: hidden;
+			}
+			.third {
+			    top: -4px;
+				transform: rotate(45deg) translate(-2.5px, -2.5px);
+			}
+		}
+	}		
+}
+

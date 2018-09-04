@@ -1,0 +1,243 @@
+@import 'font';
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+//@import "bootstrap/print";
+//@import "bootstrap/glyphicons";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/component-animations";
+//@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+//@import "bootstrap/breadcrumbs";
+//@import "bootstrap/pagination";
+//@import "bootstrap/pager";
+//@import "bootstrap/labels";
+//@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+//@import "bootstrap/thumbnails";
+//@import "bootstrap/alerts";
+//@import "bootstrap/progress-bars";
+//@import "bootstrap/media";
+@import "bootstrap/list-group";
+//@import "bootstrap/panels";
+//@import "bootstrap/responsive-embed";
+//@import "bootstrap/wells";
+@import "bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap/modals";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popovers";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+@import 'header';
+@import 'index';
+@import 'footer';
+@import 'breadcrumbs';
+@import 'inner';
+@import 'pushy';
+@import 'ajax';
+
+
+*{
+	list-style: none;
+	outline: none;
+	font-weight:300;
+}
+
+
+html{
+	height: 100%;
+	font-size: 16px;
+}
+
+
+body{
+	min-height: 100%;
+	@media screen and (min-width: 1200px) {			
+		& > .container:not(.prices){
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}	
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+a:hover,
+a:focus{
+	transition:all .2s;
+	outline: none;
+}
+
+
+main{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+
+hr{
+	@include border(#000);
+}
+
+
+h2{
+	padding-bottom: 20px;
+}
+
+//fixed nav
+.fixed{
+	position: fixed;
+	top: 0;
+	z-index: 102;
+	box-shadow: 0 0px 8px -3px rgba(50, 50, 50, 0.75);
+}
+
+//fixed left sidebar
+.sticky {
+  position: fixed;
+  z-index: 101;
+}
+.stop {
+  position: relative;
+  z-index: 101;
+}
+
+//modal
+.modal{
+	.modal-title{
+		color: #333;
+	}
+	.form-group{
+		display: flex;
+		flex-direction: column;
+		
+		input{
+			margin-bottom: 10px;
+			padding: 7px;
+			font-size: 0.8rem;
+			border: 1px solid $mainColor;
+		}
+		textarea{
+			min-height: 140px;
+			resize: none;
+			padding: 7px;
+			border: 1px solid $mainColor;
+			font-size: 0.8rem;
+		}
+		::-webkit-input-placeholder {color:$mainColor;}
+		::-moz-placeholder          {color:$mainColor;}
+		:-moz-placeholder           {color:$mainColor;}
+		:-ms-input-placeholder      {color:$mainColor;}
+	}
+	.btn-default{
+		font-family: RobotoLight, sans-serif;
+		background: $mainColor;
+		border-radius: 2px;
+		color:#fff;
+		font-size: 0.875rem;
+		padding: 5px 10px;
+		position: relative;
+		border:1px solid $mainColor;
+		&:hover,
+		&:focus{
+			background: transparent;
+			color: $mainColor;
+			text-decoration: none;
+			transition: all .4s;
+			border: 1px solid $mainColor;
+		}
+	}
+	.btn-default:first-child{
+		background: transparent;
+		color: $mainColor;
+		border: 1px solid $mainColor;
+		&:hover,
+		&:focus{
+			background: $mainColor;
+			color: #fff;
+			text-decoration: none;
+			transition: all .4s;
+			border:1px solid $mainColor;
+		}
+	}	
+}	
+
+//hide search in header for mobile
+.none{
+	display: none;
+}
+
+
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#contactInfo .logo{
+		margin-top: -40px;
+	}
+	#contactInfo .logo a, .carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev{
+		display: flex;
+	}
+}
+
+.politic{
+	color:#fff;font-size:12px;
+	&:hover{
+		color:#000;
+		transition:all .4s;
+	}
+}
+
+@media print {
+	header, 
+	footer,
+	.left,
+	.right,
+	svg,
+	.modal,
+	#breadcrumb,
+	.menu-btn {
+		display: none;
+	}
+	body{
+		background: #fff;
+	}
+
+	.center {
+		margin: 20px;
+		font-size: 16pt;
+		color: #000;
+	}
+
+	.center a {
+		color: #000;
+		text-decoration: none;
+	}
+
+}	
